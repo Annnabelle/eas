@@ -1,0 +1,32 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.international
+    padding: 70px 0
+    @media screen and (max-width: 1250px)
+        padding: 50px 0
+    .internationalContainer
+        display: flex
+        flex-direction: column
+        row-gap: 70px
+        @media screen and (max-width: 768px)
+            row-gap: 50px
+        @media screen and (max-width: 550px)
+            row-gap: 25px
+        .internationalContent
+            display: flex
+            flex-direction: column
+            row-gap: 30px
+            max-width: 750px
+            width: 100%
+            .contentTitle
+                .title
+                    +typography(32px, 600, map-get($basic, 'white'))
+                    @media screen and (max-width: 1250px)
+                        font-size: 28px
+                    @media screen and (max-width: 550px)
+                        font-size: 21px
+            .contentSubtitle
+                .subtitle
+                    +typography(18px, 400, map-get($basic, 'white'))
+                    @media screen and (max-width: 1250px)
+                        font-size: 16px

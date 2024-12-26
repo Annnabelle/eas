@@ -1,0 +1,17 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.faqSection
+    .ant-collapse-content-box
+        background: map-get($basic, 'black', )
+    svg
+        color: map-get($basic, 'white') !important
+    .ant-collapse-header-text
+        +typography(21px, 400, map-get($basic, 'white'))
+        @media screen and (max-width: 1250px)
+            font-size: 18px
+        @media screen and (max-width: 768px)
+            font-size: 16px
+    .faqtext
+        +typography(18px, 400, map-get($basic, 'white'))
+        @media screen and (max-width: 768px)
+            font-size: 16px

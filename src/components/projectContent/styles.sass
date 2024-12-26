@@ -1,0 +1,66 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.projectContent
+    padding: 70px 0
+    @media screen and (max-width: 1250px)
+        padding: 50px 0
+    .projectContentContainer
+        display: flex
+        flex-direction: column
+        row-gap: 50px
+        .projectContentInfo
+            display: flex
+            flex-direction: row
+            align-items: center
+            column-gap: 50px
+            @media screen and (max-width: 850px)
+                flex-direction: column
+                row-gap: 50px
+            .projectContentInfoContainer
+                display: flex
+                flex-direction: column
+                row-gap: 30px
+                width: 100%
+                .projectContentTitle
+                    .title
+                        +typography(32px, 600, map-get($basic, 'white'))
+                        @media screen and (max-width: 1250px)
+                            font-size: 28px
+                        @media screen and (max-width: 550px)
+                            font-size: 21px
+                .infoText
+                    display: flex
+                    flex-direction: column
+                    row-gap: 30px
+                    .text
+                        +typography(18px, 600, map-get($basic, 'white'))
+                        @media screen and (max-width: 1250px)
+                            font-size: 16px
+            .infoImage
+                width: 100%
+                .img
+                    width: 100%
+                    object-fit: cover
+                    max-height: 400px
+        .description
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            .descriptionContainer
+                display: flex
+                flex-direction: column
+                row-gap: 20px
+                .descriptionTitle
+                    .title
+                        +typography(21px, 500, map-get($basic, 'white'))
+                        @media screen and (max-width: 850px)
+                            font-size: 18px
+                .descriptionList
+                    .list
+                        margin: 0
+                        padding: 0 20px
+                        .listItem
+                            line-height: 21px
+                            +typography(18px, 400, map-get($basic, 'white'))
+                            @media screen and (max-width: 850px)
+                                font-size: 16px

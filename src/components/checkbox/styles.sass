@@ -1,0 +1,17 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.checkbox
+    width: 34px
+    height: 34px
+    border-radius: 6px
+    background-color: map-get($basic, 'white', )
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: background-color 0.2s ease-in-out
+    &.checked
+        background-color: map-get($main, 'lightWhite')
+        svg
+            font-size: 24px
+            color: map-get($main, 'main')

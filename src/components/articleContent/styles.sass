@@ -1,0 +1,39 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.articleContent
+    padding: 70px 0
+    @media screen and (max-width: 1250px)
+        padding: 50px 0
+    .articleContainer
+        display: flex
+        flex-direction: column
+        row-gap: 70px
+        @media screen and (max-width: 1250px)
+            row-gap: 50px
+        @media screen and (max-width: 550px)
+            row-gap: 25px
+        .contentImage
+            .img
+                max-height: 500px
+                object-fit: cover
+                width: 100%
+        .contentItems
+            display: flex
+            flex-direction: column
+            row-gap: 70px
+            @media screen and (max-width: 1250px)
+                row-gap: 50px
+            @media screen and (max-width: 550px)
+                row-gap: 25px
+            .contentTitle
+                .title
+                    +typography(32px, 600, map-get($basic, 'white'))
+                    @media screen and (max-width: 1250px)
+                        font-size: 28px
+                    @media screen and (max-width: 550px)
+                        font-size: 21px
+            .contentText
+                .text
+                    +typography(18px, 400, map-get($basic, 'white'))
+                    @media screen and (max-width: 1250px)
+                        font-size: 16px

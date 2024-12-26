@@ -1,0 +1,21 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.newsPage
+    .newsItems
+        padding: 70px 0
+        @media screen and (max-width: 1250px)
+            padding: 50px 0
+        .newsItemsContainer
+            padding: 50px 0
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            justify-content: space-between
+            gap: 20px
+            @media screen and (max-width: 1440px)
+                grid-template-columns: repeat(3, 1fr)
+            @media screen and (max-width: 1250px)
+                padding-top: 0
+                grid-template-columns: repeat(2, 1fr)
+                justify-items: center
+            @media screen and (max-width: 867px)
+                grid-template-columns: repeat(1, 1fr)

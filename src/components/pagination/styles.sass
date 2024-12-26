@@ -1,0 +1,34 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.pagination
+    display: flex
+    align-items: center
+    gap: 15px
+    @media screen and (max-width: 420px)
+        gap: 10px
+    .paginationButton,
+    .paginationArrow
+        width: 48px
+        height: 48px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 2px solid map-get($basic, 'white')
+        background-color: transparent
+        cursor: pointer
+        transition: all 0.5s ease
+        border-radius: 6px
+        +typography(15px, 500, map-get($basic, 'white'))
+
+    .paginationArrow
+        &:hover
+            background-color: map-get($main, 'main', )
+            color: map-get($basic, 'white')
+            border-color: map-get($main, 'main')
+
+    .paginationButton.active
+        border: 2px solid map-get($basic, 'white')
+
+    .paginationArrow:disabled
+        cursor: not-allowed
+        opacity: 0.5

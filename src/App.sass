@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import './styles/_typography'
+@import './styles/_variables'
+
+body
+  font-family: "Poppins", sans-serif
+  font-weight: 400
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  background: map-get($basic, 'black')
+  color: map-get($main, 'lightWhite')
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+  margin: 0
+
+p
+  line-height: 24px
+
+.container
+  max-width: 1920px
+  width: 100%
+  padding: 0 90px
+  margin: 0 auto
+  @media screen and (max-width: 1310px)
+    max-width: 1250px
+    padding: 0 50px
+  @media screen and (max-width: 1250px)
+    max-width: 1200px
+    padding: 0 20px
+
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-track
+  background: map-get($main, 'lightBg')
+
+::-webkit-scrollbar-thumb
+  background: map-get($main, 'red')
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+  background: map-get($main, 'grey')

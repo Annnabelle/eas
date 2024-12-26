@@ -1,0 +1,56 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.development
+    padding: 70px 0
+    @media screen and (max-width: 768px)
+        padding: 50px 0
+    .developmentContainer
+        display: flex
+        flex-direction: column
+        row-gap: 50px
+        @media screen and (max-width: 1250px)
+            row-gap: 25px
+        .developmentTitle
+            .title
+                +typography(32px, 600, map-get($basic, 'white'))
+                @media screen and (max-width: 1250px)
+                    font-size: 28px
+                @media screen and (max-width: 550px)
+                    font-size: 21px
+        .developmentItems
+            display: flex
+            flex-direction: column
+            row-gap: 40px
+            @media screen and (max-width: 1250px)
+                row-gap: 20px
+            .developmentYears
+                max-width: 165px
+                border-radius: 50px
+                background: map-get($main, 'main', )
+                padding: 7px 54px
+                width: 100%
+                display: flex
+                @media screen and (max-width: 550px)
+                    max-width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                .year
+                    +typography(24px, 600, map-get($basic, 'white'))
+                    @media screen and (max-width: 768px)
+                        font-size: 21px
+                    @media screen and (max-width: 550px)
+                        text-align: center
+            .last
+                max-width: 250px
+                @media screen and (max-width: 550px)
+                    max-width: 100%
+            .developmentList
+                .list
+                    .items
+                        line-height: 26px
+                        +typography(18px, 400, map-get($basic, 'white'))
+                        @media screen and (max-width: 768px)
+                            font-size: 14px
+                        @media screen and (max-width: 420px)
+                            font-size: 12px

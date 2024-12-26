@@ -1,0 +1,26 @@
+@import ../../styles/_variables
+.language-switcher
+    padding: 20px
+    position: relative
+    .selected-language
+        border: none
+        background: transparent
+        cursor: pointer
+        display: flex
+        align-items: center
+    .dropdown-menu
+        margin-top: 10px
+        list-style: none
+        left: 0
+        right: 0
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        border: 1px solid map-get($main, "greyBg")
+        border-radius: 3px
+        background: map-get($basic, "white")
+        .language-option
+            margin: 4px 0
+            cursor: pointer

@@ -1,0 +1,104 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.advantages
+    padding: 70px 0
+    @media screen and (max-width: 868px)
+        padding: 50px 0
+    .advantagesContainer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        column-gap: 50px
+        @media screen and (max-width: 1250px)
+            column-gap: 25px
+        @media screen and (max-width: 868px)
+            flex-direction: column-reverse
+            row-gap: 50px
+        .advantagesImagesItems
+            width: 50%
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            @media screen and (max-width: 868px)
+                width: 100%
+            .itemImageBg
+                position: absolute
+                top: -5%
+                right: 0
+                height: 630px
+                width: 470px
+                border-radius: 50px
+                background: map-get($main, 'main')
+                @media screen and (max-width: 1050px)
+                    display: none
+            .itemImage
+                height: 630px
+                width: 470px
+                border-radius: 50px
+                position: relative
+                z-index: 1
+                @media screen and (max-width: 991px)
+                    width: 100%
+                @media screen and (max-width: 868px)
+                    height: 450px
+                .img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 50px
+        .advantagesContent
+            width: 50%
+            display: flex
+            flex-direction: column
+            row-gap: 40px
+            @media screen and (max-width: 868px)
+                width: 100%
+            .contentHeading
+                display: flex
+                flex-direction: column
+                row-gap: 20px
+                .advantagesTitle
+                    .title
+                        +typography(32px, 800, map-get($basic, 'white'))
+                        @media screen and (max-width: 1250px)
+                            font-size: 28px
+                        @media screen and (max-width: 550px)
+                            font-size: 21px
+                .advantagesSubtitle
+                    .subtitle
+                        +typography(18px, 400, map-get($main, 'lightWhite'))
+                        @media screen and (max-width: 1050px)
+                            font-size: 16px
+            .contentAdvantages
+                display: flex
+                flex-direction: column
+                row-gap: 30px
+                .advantagesItems
+                    display: flex
+                    align-items: center
+                    column-gap: 20px
+                    .itemIcon
+                        width: 50px
+                        height: 50px
+                        background: map-get($main, 'main')
+                        border-radius: 50%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        @media screen and (max-width: 550px)
+                            width: 40px
+                            height: 40px
+                        svg
+                            font-size: 32px
+                            @media screen and (max-width: 550px)
+                                font-size: 24px
+                    .itemText
+                        .text
+                            +typography(24px, 600, map-get($basic, 'white'))
+                            @media screen and (max-width: 1250px)
+                                font-size: 21px
+                            @media screen and (max-width: 1050px)
+                                font-size: 18px
+                            @media screen and (max-width: 550px)
+                                font-size: 16px

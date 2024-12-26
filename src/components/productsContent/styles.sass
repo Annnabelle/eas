@@ -1,0 +1,30 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.productContent
+    padding: 70px 0
+    @media screen and (max-width: 1250px)
+        padding: 50px 0
+    .productContentContainer
+        .productContentTitle
+            .title
+                +typography(32px, 600, map-get($basic, 'white'))
+                @media screen and (max-width: 1250px)
+                    font-size: 28px
+                @media screen and (max-width: 550px)
+                    font-size: 21px
+        .productsItems
+            .pagination
+                width: 100%
+    .productsItemsContainer
+        padding: 50px 0
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        justify-content: space-between
+        gap: 20px
+        @media screen and (max-width: 1440px)
+            grid-template-columns: repeat(2, 1fr)
+        @media screen and (max-width: 1250px)
+            grid-template-columns: repeat(2, 1fr)
+            justify-items: center
+        @media screen and (max-width: 867px)
+            grid-template-columns: repeat(1, 1fr)

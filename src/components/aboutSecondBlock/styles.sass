@@ -1,0 +1,85 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.aboutSection
+    display: flex
+    justify-content: space-between
+    position: relative
+    @media screen and (max-width: 870px)
+        flex-direction: column
+    .aboutMainBlock
+        width: 100%
+        background: map-get($main, 'main' )
+        position: relative
+        padding: 80px 60px
+        display: flex
+        align-items: center
+        justify-content: center
+        @media screen and (max-width: 1400px)
+            padding: 40px 30px
+        @media screen and (max-width: 1320px)
+            padding: 40px 0
+        @media screen and (max-width: 870px)
+            padding: 80px 60px
+        @media screen and (max-width: 550px)
+            padding: 50px 0
+        &::before
+            content: ''
+            position: absolute
+            right: -28px
+            top: 0
+            bottom: 0
+            width: 90px
+            background-color: map-get($main, 'main')
+            clip-path: polygon(100% 0, 0 -123%, 70% 100%)
+            @media screen and (max-width: 870px)
+                display: none
+    .aboutBlock
+        padding: 80px 60px
+        width: 100%
+        @media screen and (max-width: 1320px)
+            padding: 40px 20px
+        @media screen and (max-width: 870px)
+            padding: 80px 60px
+        @media screen and (max-width: 550px)
+            padding: 50px 0
+        .link
+            position: relative
+            z-index: 2
+            transition: all 0.5s ease
+            +typography(18px, 400, #3DC1C3)
+            text-decoration: none
+            &::before
+                content: ''
+                width: 100%
+                transition: all 0.5s ease
+            &:hover
+                &::before
+                    display: block
+                    position: absolute
+                    height: 2px
+                    color: #3DC1C3
+                    background: #3DC1C3
+                    bottom: -4px
+    .aboutSectionLogo
+        position: absolute
+        right: 0
+        left: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        z-index: 1
+        @media screen and (max-width: 1320px)
+            display: none
+        .img
+            position: absolute
+            left: 0
+            right: 0
+            margin: auto
+            top: 0
+            bottom: 0
+    .aboutText
+        margin-bottom: 20px
+        .text
+            +typography(18px, 400, map-get($basic, 'white'))
+            @media screen and (max-width: 1250px)
+                font-size: 14px

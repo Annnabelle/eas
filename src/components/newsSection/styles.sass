@@ -1,0 +1,10 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.newsSection
+    padding: 70px 0
+    @media screen and (max-width: 870px)
+        padding: 50px 0
+    .newsSectionContainer
+        .newSectionTitle
+            .title
+                +typography(32px, 600, map-get($basic, 'white'))

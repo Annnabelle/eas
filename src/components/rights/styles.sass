@@ -1,0 +1,15 @@
+@import '../../styles/_typography'
+@import  '../../styles/_variables'
+.right
+    background: map-get($main, 'main')
+    padding: 30px
+    .rightText
+        display: flex
+        align-items: center
+        justify-content: center
+        .text
+            +typography(18px, 400, map-get($basic, 'white'))
+            @media screen and (max-width: 1250px)
+                font-size: 16px
+            @media screen and (max-width: 550px)
+                font-size: 13px
