@@ -1,0 +1,50 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.userArticleCard
+    background: linear-gradient(90deg, #151515 0%, #7B7B7B 100%)
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25)
+    padding: 30px
+    .userArticleCardContainer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        @media screen and (max-width: 768px)
+            flex-direction: column
+            row-gap: 25px
+        .articleInfo
+            width: 100%
+            display: flex
+            flex-direction: column
+            row-gap: 20px
+            .user
+                display: flex
+                align-items: center
+                column-gap: 10px
+                .userIcon
+                    width: 50px
+                    height: 50px
+                    border-radius: 50px
+                    background: map-get($basic, 'black', )
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                .userName
+                    .name
+                        +typography(24px, 400, map-get($basic, 'white'))
+                        @media screen and (max-width: 768px)
+                            font-size: 20px
+            .articlePublishDate
+                display: flex
+                align-items: center
+                column-gap: 10px
+                .text,
+                .date
+                    +typography(18px, 400, map-get($basic, 'white'))
+                    @media screen and (max-width: 768px)
+                        font-size: 16px
+            .infoText
+                line-height: 1.5
+                +typography(18px, 400, map-get($basic, 'white'))
+                @media screen and (max-width: 768px)
+                    font-size: 16px

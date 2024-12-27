@@ -1,0 +1,62 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.blogInnerPage
+    margin-top: 100px
+.blogInnerContainer
+    display: flex
+    flex-direction: column
+    row-gap: 25px
+    .linkBack
+        margin-top: 50px
+        display: flex
+        align-items: center
+        column-gap: 10px
+        text-decoration: none
+        +typography(18px, 400, map-get($basic, 'white'))
+        .link
+            +typography(18px, 400, map-get($basic, 'white'))
+    .blogHeadingContent
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .contentTitle
+            .title
+                text-decoration: underline
+                +typography(20px, 300, rgba(255, 255, 255, 0.78))
+                @media screen and (max-width: 768px)
+                    font-size: 18px
+        .contentTag
+            .tag
+                +typography(24px, 400, map-get($basic, 'white'))
+                @media screen and (max-width: 768px)
+                    font-size: 20px
+    .blogHighlightSection
+        display: flex
+        align-items: center
+        justify-content: center
+        column-gap: 50px
+        width: 100%
+        margin-top: 25px
+        @media screen and (max-width: 1250px)
+            flex-direction: column
+            row-gap: 50px
+        .highlightContent
+            width: 100%
+            display: flex
+            flex-direction: column
+            row-gap: 40px
+            justify-content: space-between
+            .contentTitle
+                .title
+                    +typography(24px, 600, map-get($basic, 'white'))
+                    @media screen and (max-width: 768px)
+                        font-size: 20px
+            .contentText
+                .text
+                    line-height: 1.5
+                    +typography(18px, 500, map-get($basic, 'lightWhite'))
+                    @media screen and (max-width: 768px)
+                        font-size: 16px
+            .contentImage
+                .img
+                    width: 100%
