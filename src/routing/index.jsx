@@ -8,6 +8,7 @@ import Projects from "../pages/projects";
 import ProjectInner from "../pages/projectInner";
 import ContactUs from "../components/contactUs";
 import Blog from "../pages/blog";
+import BlogInnerPage from "../pages/blogInner";
 
 export const Routing = () => {
   return (
@@ -43,6 +44,10 @@ export const Routing = () => {
       <Route
         path='/blog'
         element={<Blog />}
+      />
+      <Route
+        path='/blog/1'
+        element={<BlogInnerPage />}
       />
     </Routes>
   );

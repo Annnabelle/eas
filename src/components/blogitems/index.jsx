@@ -1,12 +1,12 @@
 import React from "react";
 import { FaRegUser } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 import blogImage from "../../assets/articleContentImage.png";
-
-import "./styles.sass";
-import { Link } from "react-router-dom";
 import BlogFilter from "../blogFilter";
 import Pagination from "../pagination";
+
+import "./styles.sass";
 
 const BlogItems = () => {
   const filterData = [
@@ -62,7 +62,7 @@ const BlogItems = () => {
                 </div>
                 <Link
                   className='link'
-                  to='/'
+                  to='/blog/1'
                 >
                   <p className='linkSeeMore'>Подробнее</p>
                 </Link>
