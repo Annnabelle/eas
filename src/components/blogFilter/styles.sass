@@ -1,0 +1,22 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+
+.blogFilter
+    background: #151515
+    border-radius: 6px
+    padding: 20px
+    display: flex
+    flex-direction: column
+    row-gap: 30px
+    height: 100%
+    .filterTitle
+        .title
+            text-align: center
+            +typography(24px, 500, map-get($basic, 'white'))
+    .filterBtns
+        display: flex
+        flex-direction: column
+        row-gap: 30px
+        .btns
+            .btn
+                border-radius: 20px
