@@ -58,6 +58,12 @@ const NavBar = ({ burgerIsOpen, toggleMenu, isNotMainPage }) => {
                 {t("blocks.navigation.contacts")}
               </Link>
             )}
+            <Link
+              className='navLink'
+              to='/blog'
+            >
+              Блог
+            </Link>
           </div>
         </div>
       </div>
