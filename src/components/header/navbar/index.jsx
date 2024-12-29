@@ -64,6 +64,12 @@ const NavBar = ({ burgerIsOpen, toggleMenu, isNotMainPage }) => {
             >
               Блог
             </Link>
+            <Link
+              className='navLink'
+              to='/resources'
+            >
+              Ресурсы
+            </Link>
           </div>
         </div>
       </div>
