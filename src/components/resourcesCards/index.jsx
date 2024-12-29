@@ -12,7 +12,7 @@ const ResourcesCards = () => {
           <div className='card'>
             <Link
               className='cardLink'
-              to='/'
+              to='/resourcesInner/1'
             >
               <div className='cardContainer'>
                 <div className='cardImage'>
@@ -35,7 +35,7 @@ const ResourcesCards = () => {
                   <div className='contentLinkMore'>
                     <Link
                       className='link'
-                      to='/'
+                      to='/resourcesInner/1'
                     >
                       Смотреть подробнее...
                     </Link>
