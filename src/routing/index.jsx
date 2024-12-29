@@ -10,6 +10,7 @@ import ContactUs from "../components/contactUs";
 import Blog from "../pages/blog";
 import BlogInnerPage from "../pages/blogInner";
 import Resources from "../pages/resources";
+import ResourcesInner from "../pages/resourcesInner";
 
 export const Routing = () => {
   return (
@@ -53,6 +54,10 @@ export const Routing = () => {
       <Route
         path='/resources'
         element={<Resources />}
+      />
+      <Route
+        path='/resourcesInner/1'
+        element={<ResourcesInner />}
       />
     </Routes>
   );

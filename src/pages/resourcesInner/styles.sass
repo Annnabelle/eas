@@ -1,0 +1,21 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.resourcesInner
+    .resourcesInnerContainer
+        margin-top: 50px
+        display: flex
+        flex-direction: column
+        row-gap: 50px
+        .resourcesInnerVideo
+            .video
+                width: 100%
+        .resourcesInnerContent
+            display: flex
+            flex-direction: column
+            row-gap: 50px
+            .contentTitle
+                .title
+                    +typography(24px, 500, map-get($basic, 'white'))
+            .contentText
+                .text
+                    +typography(18px, 400, map-get($basic, 'white'))

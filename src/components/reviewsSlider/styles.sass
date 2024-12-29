@@ -1,0 +1,121 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.reviews
+    margin-bottom: 50px
+    .reviewsContainer
+        .reviewsTitle
+            text-align: center
+            .title
+                +typography(32px, 600, map-get($basic, 'white'))
+                @media screen and (max-width: 1250px)
+                    font-size: 24px
+                @media screen and (max-width: 550px)
+                    font-size: 20px
+    .reviewsSlider
+        .reviewsSliderSwiper
+            display: flex
+            flex-direction: column-reverse
+            .sliderHeader
+                margin: 25px 0
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                .btnsGroup
+                    left: -100%
+                    right: inherit
+                    bottom: 20px
+                    top: inherit
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    column-gap: 10px
+                    .swiper-button-prev,
+                    .swiper-button-next
+                        cursor: pointer
+                        color: map-get($basic, 'white')
+                        transition: all 0.5s ease
+                        svg
+                            font-size: 24px
+                        &:hover
+                            color: map-get($main, 'main')
+                    .swiper-button-prev
+                        top: 0
+                        transform: rotate(-90deg)
+
+                    .swiper-button-next
+                        bottom: 0
+                        transform: rotate(-90deg)
+
+                    .swiper-pagination
+                        display: flex
+                        align-items: center
+                        flex-direction: row
+                        column-gap: 10px
+                        &-bullet
+                            width: 14px
+                            height: 14px
+                            background-color: map-get($main, 'lightWhite')
+                            border-radius: 50%
+                            margin: 10px 0
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            color: map-get($main, "main" )
+                            font-weight: bold
+                            font-size: 14px
+                            transition: background-color 0.3s, transform 0.3s
+                            cursor: pointer
+
+                        &-bullet-active
+                            width: 14px
+                            height: 14px
+                            background-color: map-get($main, "main" )
+                            transform: scale(1.2)
+            .reviewCard
+                background: map-get($main, 'main')
+                padding: 20px 30px
+                border-radius: 6px
+                @media screen and (max-width: 550px)
+                    padding: 10px 20px
+                .cardContainer
+                    display: flex
+                    flex-direction: column
+                    row-gap: 20px
+                    .cardText
+                        .text
+                            +typography(18px, 400, map-get($basic, 'white'))
+                            @media screen and (max-width: 991px)
+                                font-size: 16px
+                    .cardBottomContent
+                        display: flex
+                        flex-direction: row
+                        align-items: center
+                        justify-content: space-between
+                        .user
+                            display: flex
+                            flex-direction: row
+                            align-items: center
+                            column-gap: 10px
+                            .userIcon
+                                width: 50px
+                                height: 50px
+                                background: map-get($basic, 'black')
+                                border-radius: 50px
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                font-size: 24px
+                                @media screen and (max-width: 550px)
+                                    width: 40px
+                                    height: 40px
+                                    font-size: 18px
+                            .userName
+                                .name
+                                    +typography(18px, 400, map-get($basic, 'white'))
+                                    @media screen and (max-width: 550px)
+                                        font-size: 16px
+                        .publishDate
+                            .date
+                                +typography(18px, 400, map-get($basic, 'white'))
+                                @media screen and (max-width: 550px)
+                                    font-size: 16px
