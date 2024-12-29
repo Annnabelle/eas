@@ -9,6 +9,7 @@ import ProjectInner from "../pages/projectInner";
 import ContactUs from "../components/contactUs";
 import Blog from "../pages/blog";
 import BlogInnerPage from "../pages/blogInner";
+import Resources from "../pages/resources";
 
 export const Routing = () => {
   return (
@@ -48,6 +49,10 @@ export const Routing = () => {
       <Route
         path='/blog/1'
         element={<BlogInnerPage />}
+      />
+      <Route
+        path='/resources'
+        element={<Resources />}
       />
     </Routes>
   );
