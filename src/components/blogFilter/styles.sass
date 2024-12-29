@@ -13,10 +13,19 @@
         .title
             text-align: center
             +typography(24px, 500, map-get($basic, 'white'))
+            @media screen and (max-width: 1100px)
+                font-size: 20px
     .filterBtns
         display: flex
         flex-direction: column
         row-gap: 30px
+        @media screen and (max-width: 876px)
+            flex-direction: row
+            justify-content: space-between
+            gap: 10px
+            flex-wrap: wrap
         .btns
+            @media screen and (max-width: 876px)
+                width: 45%
             .btn
                 border-radius: 20px
